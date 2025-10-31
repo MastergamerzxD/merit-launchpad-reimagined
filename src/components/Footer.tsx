@@ -16,9 +16,8 @@ export default function Footer() {
             <p className="text-sm opacity-90 mb-4">
               Launch Your Future with India's most affordable and comprehensive mock test platform.
             </p>
-            <Button variant="outline" className="bg-transparent border-white/30 hover:bg-white/10">
-              <Download className="mr-2 h-4 w-4" />
-              Download App
+            <Button variant="outline" className="bg-transparent border-white/30 hover:bg-white/10" asChild>
+              <Link to="/fee-structure">Start Free Test</Link>
             </Button>
           </div>
 

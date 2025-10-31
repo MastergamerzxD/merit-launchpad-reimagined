@@ -3,7 +3,8 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import AboutSection from "@/components/home/AboutSection";
 import CoursesSection from "@/components/home/CoursesSection";
-import FeaturesSection from "@/components/home/FeaturesSection";
+import SuccessStoriesSection from "@/components/home/SuccessStoriesSection";
+import WhyChooseSection from "@/components/home/WhyChooseSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import CTASection from "@/components/home/CTASection";
 
@@ -15,7 +16,8 @@ export default function Index() {
         <HeroSection />
         <AboutSection />
         <CoursesSection />
-        <FeaturesSection />
+        <SuccessStoriesSection />
+        <WhyChooseSection />
         <TestimonialsSection />
         <CTASection />
       </main>

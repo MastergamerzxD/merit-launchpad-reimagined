@@ -90,9 +90,8 @@ export default function Navbar() {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Button variant="default" className="shadow-glow hover:shadow-premium transition-all duration-300">
-              <Download className="mr-2 h-4 w-4" />
-              Download App
+            <Button variant="default" className="shadow-glow hover:shadow-premium transition-all duration-300" asChild>
+              <Link to="/fee-structure">Start Free Test</Link>
             </Button>
           </div>
 
@@ -154,9 +153,8 @@ export default function Navbar() {
               Contact
             </Link>
 
-            <Button className="w-full shadow-glow">
-              <Download className="mr-2 h-4 w-4" />
-              Download App
+            <Button className="w-full shadow-glow" asChild>
+              <Link to="/fee-structure">Start Free Test</Link>
             </Button>
           </div>
         )}

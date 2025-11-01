@@ -11,6 +11,7 @@ import Blog from "./pages/Blog";
 import CLAT from "./pages/courses/CLAT";
 import CTET2 from "./pages/courses/CTET2";
 import DSSSB from "./pages/courses/DSSSB";
+import CUET from "./pages/courses/CUET";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/courses/clat" element={<CLAT />} />
           <Route path="/courses/ctet-2" element={<CTET2 />} />
           <Route path="/courses/dsssb" element={<DSSSB />} />
+          <Route path="/courses/cuet" element={<CUET />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

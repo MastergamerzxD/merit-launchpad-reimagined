@@ -90,9 +90,17 @@ export default function Navbar() {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Button variant="default" className="shadow-glow hover:shadow-premium transition-all duration-300" asChild>
-              <Link to="/fee-structure">Start Free Test</Link>
-            </Button>
+            <div className="flex items-center gap-3">
+              <Button variant="outline" className="shadow-sm hover:shadow-md transition-all duration-300" asChild>
+                <a href="#" className="flex items-center gap-2">
+                  <Download className="h-4 w-4" />
+                  Download App
+                </a>
+              </Button>
+              <Button variant="default" className="shadow-glow hover:shadow-premium transition-all duration-300" asChild>
+                <Link to="/fee-structure">Start Free Test</Link>
+              </Button>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -153,9 +161,17 @@ export default function Navbar() {
               Contact
             </Link>
 
-            <Button className="w-full shadow-glow" asChild>
-              <Link to="/fee-structure">Start Free Test</Link>
-            </Button>
+            <div className="space-y-3">
+              <Button variant="outline" className="w-full" asChild>
+                <a href="#" className="flex items-center justify-center gap-2">
+                  <Download className="h-4 w-4" />
+                  Download App
+                </a>
+              </Button>
+              <Button className="w-full shadow-glow" asChild>
+                <Link to="/fee-structure">Start Free Test</Link>
+              </Button>
+            </div>
           </div>
         )}
       </div>

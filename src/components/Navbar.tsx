@@ -103,6 +103,12 @@ export default function Navbar() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
+                  <Link to="/faq" className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${isActive("/faq") ? "text-primary" : "text-foreground"}`}>
+                    FAQ
+                  </Link>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-sm font-medium">More</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4 bg-popover">
@@ -135,7 +141,7 @@ export default function Navbar() {
                 </a>
               </Button>
               <Button variant="default" className="shadow-glow hover:shadow-premium transition-all duration-300" asChild>
-                <Link to="/contact">Get Started</Link>
+                <a href="https://play.google.com/store/apps/details?id=co.robin.qibrw&hl=en" target="_blank" rel="noopener noreferrer">Get Started</a>
               </Button>
             </div>
           </div>
@@ -198,6 +204,14 @@ export default function Navbar() {
               Contact
             </Link>
 
+            <Link
+              to="/faq"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${isActive("/faq") ? "bg-primary/10 text-primary" : "hover:bg-accent"}`}
+            >
+              FAQ
+            </Link>
+
             <div className="space-y-2">
               <div className="px-3 py-2 text-sm font-semibold text-muted-foreground">More</div>
               {moreLinks.map((link) => (
@@ -220,7 +234,7 @@ export default function Navbar() {
                 </a>
               </Button>
               <Button className="w-full shadow-glow" asChild>
-                <Link to="/contact">Get Started</Link>
+                <a href="https://play.google.com/store/apps/details?id=co.robin.qibrw&hl=en" target="_blank" rel="noopener noreferrer">Get Started</a>
               </Button>
             </div>
           </div>

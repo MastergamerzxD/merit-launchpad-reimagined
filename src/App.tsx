@@ -22,6 +22,7 @@ import TermsConditions from "./pages/TermsConditions";
 import OurTeam from "./pages/OurTeam";
 import ImportantTips from "./pages/ImportantTips";
 import FeeStructure from "./pages/FeeStructure";
+import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -52,6 +53,7 @@ const App = () => (
           <Route path="/our-team" element={<OurTeam />} />
           <Route path="/important-tips" element={<ImportantTips />} />
           <Route path="/fee-structure" element={<FeeStructure />} />
+          <Route path="/faq" element={<FAQ />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

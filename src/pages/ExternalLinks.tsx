@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Download, Globe, BookOpen } from "lucide-react";
 
@@ -83,6 +84,11 @@ export default function ExternalLinksPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO 
+        title="External Links - Merit Launchers | Official Exam Resources & Links"
+        description="Access official links for CUET, CLAT, CTET, JEE, NEET, IPMAT, SSC, DSSSB exams. Find NTA, CBSE, IIM, and other authoritative exam resources in one place."
+        keywords="NTA link, CUET official website, CLAT link, JEE main link, NEET official site, SSC website, DSSSB portal, exam official links"
+      />
       <Navbar />
       
       <main className="flex-grow">

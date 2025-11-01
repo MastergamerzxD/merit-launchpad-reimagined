@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Download, HelpCircle, Mail } from "lucide-react";
 import {
@@ -38,6 +39,11 @@ export default function FAQ() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO 
+        title="FAQ - Merit Launchers | Frequently Asked Questions"
+        description="Find answers to common questions about Merit Launchers mock tests. Learn about free tests, payment methods, refund policy, test updates, solutions and rankings."
+        keywords="merit launchers FAQ, mock test questions, test preparation help, free mock test, refund policy, test solutions"
+      />
       <Navbar />
       
       <main className="flex-grow">

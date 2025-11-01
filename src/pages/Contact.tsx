@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Mail, Phone, MapPin, Clock, Facebook, Instagram, Youtube, MessageCircle, Send, User, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -26,11 +27,16 @@ export default function Contact() {
   };
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/919354549654", "_blank");
+    window.open("https://wa.me/919354902925", "_blank");
   };
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Contact Us - Merit Launchers | Get Support & Start Preparation"
+        description="Get in touch with Merit Launchers. Contact us for course inquiries, technical support, or partnership opportunities. Email: meritlaunchers3@gmail.com | Phone: +91 93549 02925"
+        keywords="contact merit launchers, support, mock test help, course inquiry, customer service"
+      />
       <Navbar />
       
       <main>

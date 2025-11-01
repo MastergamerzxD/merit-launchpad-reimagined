@@ -23,9 +23,9 @@ export default function Footer() {
                   Download App
                 </a>
               </Button>
-              <Button variant="outline" className="bg-transparent border-white/30 hover:bg-white/10 w-full" asChild>
-                <Link to="/contact">Get Started</Link>
-              </Button>
+            <Button variant="outline" className="bg-transparent border-white/30 hover:bg-white/10 w-full" asChild>
+              <a href="https://play.google.com/store/apps/details?id=co.robin.qibrw&hl=en" target="_blank" rel="noopener noreferrer">Get Started</a>
+            </Button>
             </div>
           </div>
 
@@ -37,6 +37,8 @@ export default function Footer() {
               <li><Link to="/about" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">About Us</Link></li>
               <li><Link to="/blog" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">Blog</Link></li>
               <li><Link to="/contact" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">Contact Us</Link></li>
+              <li><Link to="/faq" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">FAQ</Link></li>
+              <li><Link to="/fee-structure" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">Fee Structure</Link></li>
             </ul>
           </div>
 
@@ -46,9 +48,13 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link to="/courses/cuet" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">CUET Mock Tests</Link></li>
               <li><Link to="/courses/clat" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">CLAT Preparation</Link></li>
+              <li><Link to="/courses/ctet-1" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">CTET Paper I</Link></li>
+              <li><Link to="/courses/ctet-2" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">CTET Paper II</Link></li>
               <li><Link to="/courses/jee" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">JEE Practice Tests</Link></li>
               <li><Link to="/courses/neet" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">NEET Mock Series</Link></li>
+              <li><Link to="/courses/ipmat" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">IPMAT Preparation</Link></li>
               <li><Link to="/courses/ssc" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">SSC Exams</Link></li>
+              <li><Link to="/courses/dsssb" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">DSSSB Tests</Link></li>
             </ul>
           </div>
 
@@ -62,30 +68,30 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-2 text-sm opacity-90">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <a href="mailto:contact@meritlaunchers.com" className="hover:text-primary transition-colors">
-                  contact@meritlaunchers.com
+                <a href="mailto:meritlaunchers3@gmail.com" className="hover:text-primary transition-colors break-all">
+                  meritlaunchers3@gmail.com
                 </a>
               </li>
               <li className="flex items-center space-x-2 text-sm opacity-90">
                 <Phone className="h-4 w-4 flex-shrink-0" />
-                <a href="tel:+911234567890" className="hover:text-primary transition-colors">
-                  +91 123 456 7890
+                <a href="tel:+919354902925" className="hover:text-primary transition-colors">
+                  +91 93549 02925
                 </a>
               </li>
             </ul>
 
             {/* Social Media */}
             <div className="flex items-center space-x-3 mt-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61571056940351" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Facebook">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <a href="https://x.com/MeritLaunchers" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Twitter">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/meritlaunchers/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <a href="https://youtube.com/@meritlaunchers" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="YouTube">
                 <Youtube className="h-5 w-5" />
               </a>
             </div>
@@ -98,9 +104,11 @@ export default function Footer() {
             <p className="text-sm opacity-75">
               © {currentYear} Merit Launchers. All rights reserved.
             </p>
-            <div className="flex items-center space-x-6 text-sm opacity-75">
-              <Link to="/privacy" className="hover:opacity-100 hover:text-primary transition-all">Privacy Policy</Link>
-              <Link to="/terms" className="hover:opacity-100 hover:text-primary transition-all">Terms of Service</Link>
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-sm opacity-75">
+              <Link to="/privacy-policy" className="hover:opacity-100 hover:text-primary transition-all">Privacy Policy</Link>
+              <Link to="/terms-conditions" className="hover:opacity-100 hover:text-primary transition-all">Terms & Conditions</Link>
+              <Link to="/return-policy" className="hover:opacity-100 hover:text-primary transition-all">Return Policy</Link>
+              <Link to="/external-links" className="hover:opacity-100 hover:text-primary transition-all">External Links</Link>
             </div>
           </div>
         </div>

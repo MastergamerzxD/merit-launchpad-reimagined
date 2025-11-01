@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Download, CreditCard, Clock, Shield, TrendingUp } from "lucide-react";
 
@@ -27,6 +28,11 @@ export default function FeeStructure() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO 
+        title="Fee Structure - Merit Launchers | Affordable Mock Test Pricing"
+        description="Transparent and affordable pricing for Merit Launchers mock tests. CUET ₹99, CLAT ₹299, CTET ₹299, JEE ₹149, NEET ₹149, SSC ₹249. Each course includes 10 full-length tests with detailed analytics."
+        keywords="mock test fees, test series pricing, affordable test preparation, CUET fee, CLAT fee, JEE mock test price, NEET test series cost"
+      />
       <Navbar />
       
       <main className="flex-grow">

@@ -33,8 +33,11 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 hover:opacity-90 transition-opacity">
+          <Link to="/" className="flex items-center space-x-3 hover:opacity-90 transition-opacity group">
             <img src={logo} alt="Merit Launchers" className="h-10 w-auto" />
+            <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent hidden sm:block">
+              Merit Launchers
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -79,6 +82,12 @@ export default function Navbar() {
                 <NavigationMenuItem>
                   <Link to="/about" className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${isActive("/about") ? "text-primary" : "text-foreground"}`}>
                     About Us
+                  </Link>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <Link to="/blog" className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${isActive("/blog") ? "text-primary" : "text-foreground"}`}>
+                    Blog
                   </Link>
                 </NavigationMenuItem>
 
@@ -151,6 +160,14 @@ export default function Navbar() {
               className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${isActive("/about") ? "bg-primary/10 text-primary" : "hover:bg-accent"}`}
             >
               About Us
+            </Link>
+
+            <Link
+              to="/blog"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${isActive("/blog") ? "bg-primary/10 text-primary" : "hover:bg-accent"}`}
+            >
+              Blog
             </Link>
 
             <Link

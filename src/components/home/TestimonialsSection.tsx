@@ -14,14 +14,14 @@ const testimonials = [
     exam: "CLAT 2024",
     image: "RV",
     rating: 5,
-    text: "The best part? One free mock test to start with! The quality is exceptional and prices are incredibly affordable. Got into my dream law college thanks to Merit Launchers.",
+    text: "The best part? One free mock test to start with! The quality is exceptional. Got into my dream law college thanks to Merit Launchers.",
   },
   {
     name: "Ananya Singh",
     exam: "JEE 2024",
     image: "AS",
     rating: 5,
-    text: "Instant results and topic-wise analysis helped me focus on my weak areas. The questions are challenging and exactly like JEE. Worth every rupee!",
+    text: "Instant results and topic-wise analysis helped me focus on my weak areas. The questions are challenging and exactly like JEE. Highly effective!",
   },
   {
     name: "Karan Patel",

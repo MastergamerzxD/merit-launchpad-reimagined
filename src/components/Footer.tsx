@@ -14,7 +14,7 @@ export default function Footer() {
           <div>
             <img src={logo} alt="Merit Launchers" className="h-12 w-auto mb-4" />
             <p className="text-sm opacity-90 mb-4">
-              Launch Your Future with India's most affordable and comprehensive mock test platform.
+              Launch Your Future with India's most comprehensive mock test platform.
             </p>
             <div className="space-y-2">
               <Button variant="outline" className="bg-transparent border-white/30 hover:bg-white/10 w-full" asChild>
@@ -24,7 +24,7 @@ export default function Footer() {
                 </a>
               </Button>
               <Button variant="outline" className="bg-transparent border-white/30 hover:bg-white/10 w-full" asChild>
-                <Link to="/fee-structure">Start Free Test</Link>
+                <Link to="/contact">Get Started</Link>
               </Button>
             </div>
           </div>
@@ -35,7 +35,6 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link to="/" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">Home</Link></li>
               <li><Link to="/about" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">About Us</Link></li>
-              <li><Link to="/fee-structure" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">Fee Structure</Link></li>
               <li><Link to="/blog" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">Blog</Link></li>
               <li><Link to="/contact" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">Contact Us</Link></li>
             </ul>

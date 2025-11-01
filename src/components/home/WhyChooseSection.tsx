@@ -1,4 +1,4 @@
-import { Zap, TrendingUp, IndianRupee, Clock, BarChart3, Award, Shield, Smartphone } from "lucide-react";
+import { Zap, TrendingUp, Clock, BarChart3, Award, Shield, Smartphone, Target } from "lucide-react";
 import studentStudying from "@/assets/student-studying.jpg";
 import digitalLearning from "@/assets/digital-learning.jpg";
 
@@ -18,9 +18,9 @@ const features = [
     bgColor: "bg-blue-50 dark:bg-blue-950/20",
   },
   {
-    icon: IndianRupee,
-    title: "Most Affordable",
-    description: "Premium quality at unbeatable prices",
+    icon: Target,
+    title: "Accessible to All",
+    description: "Premium quality for every student",
     color: "text-green-500",
     bgColor: "bg-green-50 dark:bg-green-950/20",
   },

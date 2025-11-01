@@ -34,7 +34,7 @@ export default function HeroSection() {
 
             {/* Subheading */}
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto lg:mx-0 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              India's most affordable mock test platform for CUET, CLAT, JEE, NEET, SSC, DSSSB & more. 
+              India's comprehensive mock test platform for CUET, CLAT, JEE, NEET, SSC, DSSSB & more. 
               Get instant results, detailed analytics, and expert guidance.
             </p>
 
@@ -57,7 +57,7 @@ export default function HeroSection() {
                 className="text-lg px-8 py-6 border-2 hover:border-primary hover:bg-primary/5"
                 asChild
               >
-                <Link to="/fee-structure">
+                <Link to="/about">
                   View All Courses
                 </Link>
               </Button>
@@ -103,8 +103,8 @@ export default function HeroSection() {
                 <div className="text-xs text-muted-foreground">Free Test</div>
               </div>
               <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-premium animate-float" style={{ animationDelay: "0.5s" }}>
-                <div className="text-2xl font-bold text-accent">₹399</div>
-                <div className="text-xs text-muted-foreground">Starting at</div>
+                <div className="text-2xl font-bold text-accent">7+</div>
+                <div className="text-xs text-muted-foreground">Exam Types</div>
               </div>
             </div>
 

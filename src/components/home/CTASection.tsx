@@ -65,7 +65,7 @@ export default function CTASection() {
               className="text-lg px-8 py-6 border-2 border-white bg-transparent text-white hover:bg-white hover:text-primary transition-all duration-300"
               asChild
             >
-              <Link to="/fee-structure">
+              <Link to="/about">
                 View All Courses
               </Link>
             </Button>
@@ -78,8 +78,8 @@ export default function CTASection() {
               <div className="text-sm text-white/80">Free to Start</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-1">0₹</div>
-              <div className="text-sm text-white/80">First Test</div>
+              <div className="text-3xl md:text-4xl font-bold mb-1">1</div>
+              <div className="text-sm text-white/80">Free Test</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-1">24/7</div>

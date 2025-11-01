@@ -1,4 +1,4 @@
-import { Zap, TrendingUp, IndianRupee, Clock, BarChart3, Award, Download, Lock } from "lucide-react";
+import { Zap, TrendingUp, Clock, BarChart3, Award, Download, Lock, Target } from "lucide-react";
 
 const features = [
   {
@@ -16,9 +16,9 @@ const features = [
     bgColor: "bg-blue-50 dark:bg-blue-950/20",
   },
   {
-    icon: IndianRupee,
-    title: "Most Affordable",
-    description: "Premium quality mock tests at prices that won't break the bank. Plus, one free test!",
+    icon: Target,
+    title: "Accessible Platform",
+    description: "Premium quality mock tests accessible to every student. Start with one free test!",
     color: "text-green-500",
     bgColor: "bg-green-50 dark:bg-green-950/20",
   },

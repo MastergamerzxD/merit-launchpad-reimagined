@@ -18,7 +18,7 @@ const courses = [
   { name: "CTET Paper I", path: "/courses/ctet-1", description: "Central Teacher Eligibility Test (Class I-V)" },
   { name: "CTET Paper II", path: "/courses/ctet-2", description: "Central Teacher Eligibility Test (Class VI-VIII)" },
   { name: "JEE", path: "/courses/jee", description: "Joint Entrance Examination" },
-  { name: "NEET", path: "/courses/neet", description: "National Eligibility Entrance Test" },
+  { name: "NEET", path: "/courses/neet", description: "National Eligibility cum Entrance Test" },
   { name: "SSC", path: "/courses/ssc", description: "Staff Selection Commission" },
   { name: "DSSSB", path: "/courses/dsssb", description: "Delhi Subordinate Services" },
   { name: "IPMAT", path: "/courses/ipmat", description: "IIM Indore Aptitude Test" },

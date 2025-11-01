@@ -14,6 +14,7 @@ import DSSSB from "./pages/courses/DSSSB";
 import CUET from "./pages/courses/CUET";
 import SSC from "./pages/courses/SSC";
 import NEET from "./pages/courses/NEET";
+import JEE from "./pages/courses/JEE";
 import ReturnPolicy from "./pages/ReturnPolicy";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/courses/cuet" element={<CUET />} />
           <Route path="/courses/ssc" element={<SSC />} />
           <Route path="/courses/neet" element={<NEET />} />
+          <Route path="/courses/jee" element={<JEE />} />
           <Route path="/return-policy" element={<ReturnPolicy />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />

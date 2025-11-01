@@ -29,6 +29,7 @@ const moreLinks = [
   { name: "Privacy Policy", path: "/privacy-policy", description: "How we protect your data" },
   { name: "Terms & Conditions", path: "/terms-conditions", description: "Rules and guidelines for using our services" },
   { name: "Our Team", path: "/our-team", description: "Meet the minds behind Merit Launchers" },
+  { name: "Important Tips", path: "/important-tips", description: "Guidelines for website development" },
 ];
 
 export default function Navbar() {
@@ -127,7 +128,7 @@ export default function Navbar() {
 
             <div className="flex items-center gap-3">
               <Button variant="outline" className="shadow-sm hover:shadow-md transition-all duration-300" asChild>
-                <a href="#" className="flex items-center gap-2">
+                <a href="https://play.google.com/store/apps/details?id=co.robin.qibrw&hl=en" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <Download className="h-4 w-4" />
                   Download App
                 </a>
@@ -212,7 +213,7 @@ export default function Navbar() {
 
             <div className="space-y-3">
               <Button variant="outline" className="w-full" asChild>
-                <a href="#" className="flex items-center justify-center gap-2">
+                <a href="https://play.google.com/store/apps/details?id=co.robin.qibrw&hl=en" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                   <Download className="h-4 w-4" />
                   Download App
                 </a>

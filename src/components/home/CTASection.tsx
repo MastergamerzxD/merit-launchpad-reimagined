@@ -52,11 +52,11 @@ export default function CTASection() {
               className="shadow-premium hover:shadow-glow transition-all duration-300 text-lg px-8 py-6 hover:scale-105"
               asChild
             >
-              <Link to="/courses/cuet">
+              <a href="https://play.google.com/store/apps/details?id=co.robin.qibrw&hl=en" target="_blank" rel="noopener noreferrer">
                 <Zap className="mr-2 h-5 w-5" />
                 Get Free Mock Test
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              </a>
             </Button>
             
             <Button 

@@ -40,16 +40,16 @@ export default function HeroSection() {
 
             {/* CTA Button */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-fade-in-up mb-12" style={{ animationDelay: "0.3s" }}>
-              <Button 
-                size="lg" 
-                className="shadow-glow hover:shadow-premium transition-all duration-300 text-lg px-8 py-6 animate-pulse-glow"
-                asChild
-              >
-                <Link to="/courses/cuet">
-                  <Zap className="mr-2 h-5 w-5" />
-                  Take Free Mock Test Now
-                </Link>
-              </Button>
+            <Button 
+              size="lg" 
+              className="shadow-glow hover:shadow-premium transition-all duration-300 text-lg px-8 py-6 animate-pulse-glow"
+              asChild
+            >
+              <a href="https://play.google.com/store/apps/details?id=co.robin.qibrw&hl=en" target="_blank" rel="noopener noreferrer">
+                <Zap className="mr-2 h-5 w-5" />
+                Take Free Mock Test Now
+              </a>
+            </Button>
               
               <Button 
                 size="lg" 

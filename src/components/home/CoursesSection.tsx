@@ -113,10 +113,10 @@ export default function CoursesSection() {
 
         <div className="text-center mt-12">
           <Button size="lg" variant="outline" asChild>
-            <Link to="/fee-structure">
-              View All Courses & Pricing
+            <a href="https://play.google.com/store/apps/details?id=co.robin.qibrw&hl=en" target="_blank" rel="noopener noreferrer">
+              View All Courses
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            </a>
           </Button>
         </div>
       </div>

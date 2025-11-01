@@ -18,7 +18,7 @@ export default function Footer() {
             </p>
             <div className="space-y-2">
               <Button variant="outline" className="bg-transparent border-white/30 hover:bg-white/10 w-full" asChild>
-                <a href="#" className="flex items-center justify-center gap-2">
+                <a href="https://play.google.com/store/apps/details?id=co.robin.qibrw&hl=en" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                   <Download className="h-4 w-4" />
                   Download App
                 </a>

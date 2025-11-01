@@ -275,9 +275,7 @@ export default function OurTeam() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="shadow-glow hover:shadow-premium transition-all duration-300" asChild>
-                  <a href="#" className="flex items-center gap-2">
-                    Download App
-                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=co.robin.qibrw&hl=en" target="_blank" rel="noopener noreferrer">Download App</a>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
                   <a href="/contact">Contact Us</a>

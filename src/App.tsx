@@ -14,6 +14,7 @@ import CTET2 from "./pages/courses/CTET2";
 import DSSSB from "./pages/courses/DSSSB";
 import CUET from "./pages/courses/CUET";
 import SSC from "./pages/courses/SSC";
+import ReturnPolicy from "./pages/ReturnPolicy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/courses/dsssb" element={<DSSSB />} />
           <Route path="/courses/cuet" element={<CUET />} />
           <Route path="/courses/ssc" element={<SSC />} />
+          <Route path="/return-policy" element={<ReturnPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

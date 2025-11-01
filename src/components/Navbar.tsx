@@ -24,6 +24,10 @@ const courses = [
   { name: "IPMAT", path: "/courses/ipmat", description: "IIM Indore Aptitude Test" },
 ];
 
+const moreLinks = [
+  { name: "Return & Cancellation Policy", path: "/return-policy", description: "Our refund and cancellation terms" },
+];
+
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -97,6 +101,29 @@ export default function Navbar() {
                   <Link to="/contact" className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${isActive("/contact") ? "text-primary" : "text-foreground"}`}>
                     Contact
                   </Link>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium">More</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-3 p-4 bg-popover">
+                      {moreLinks.map((link) => (
+                        <li key={link.path}>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              to={link.path}
+                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            >
+                              <div className="text-sm font-semibold leading-none">{link.name}</div>
+                              <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+                                {link.description}
+                              </p>
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
@@ -179,6 +206,20 @@ export default function Navbar() {
             >
               Contact
             </Link>
+
+            <div className="space-y-2">
+              <div className="px-3 py-2 text-sm font-semibold text-muted-foreground">More</div>
+              {moreLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block px-6 py-2 text-sm hover:bg-accent rounded-md transition-colors"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
 
             <div className="space-y-3">
               <Button variant="outline" className="w-full" asChild>

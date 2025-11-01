@@ -1,222 +1,355 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Facebook, Instagram, Youtube, MessageCircle, Send, User, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
+  });
+  const { toast } = useToast();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast({
+      title: "Message Sent Successfully!",
+      description: "We'll get back to you within 24 hours.",
+    });
+    setFormData({ name: "", email: "", phone: "", message: "" });
+  };
+
+  const handleWhatsApp = () => {
+    window.open("https://wa.me/919354549654", "_blank");
+  };
+
   return (
     <div className="min-h-screen">
       <Navbar />
       
       <main>
         {/* Hero Section */}
-        <section className="bg-gradient-hero py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Get in <span className="bg-gradient-primary bg-clip-text text-transparent">Touch</span>
+        <section className="relative bg-gradient-hero py-24 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(6,182,212,0.15),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(251,146,60,0.15),transparent_50%)]"></div>
+          
+          <div className="container mx-auto px-4 relative">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="inline-flex items-center gap-2 bg-gradient-primary p-1 rounded-full mb-6 animate-float">
+                <div className="bg-background px-6 py-2 rounded-full flex items-center gap-2">
+                  <MessageCircle className="h-5 w-5 text-primary" />
+                  <span className="text-sm font-semibold bg-gradient-primary bg-clip-text text-transparent">
+                    Always Here for You
+                  </span>
+                </div>
+              </div>
+              
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+                We're Here to Help You <span className="bg-gradient-primary bg-clip-text text-transparent">Succeed</span>
               </h1>
-              <p className="text-lg text-muted-foreground">
-                Have questions? Need help? We're here for you. Reach out and we'll respond as soon as possible.
+              
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                At Merit Launchers, we value every student, parent, and teacher who reaches out to us. Whether you have questions about our courses, mock tests, app access, payments, or partnerships, our team is always ready to assist you.
+              </p>
+              
+              <p className="text-xl font-semibold text-primary mt-6">
+                We believe that the journey to success starts with the right guidance — and we're just one message away.
               </p>
             </div>
           </div>
         </section>
 
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-3 gap-8">
-              {/* Contact Information Cards */}
-              <div className="space-y-6">
-                <Card className="shadow-card hover:shadow-premium transition-all duration-300">
-                  <CardHeader>
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
-                      <Mail className="h-6 w-6 text-primary" />
-                    </div>
-                    <CardTitle>Email Us</CardTitle>
-                    <CardDescription>Send us your queries anytime</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <a href="mailto:contact@meritlaunchers.com" className="text-primary hover:underline font-medium">
-                      contact@meritlaunchers.com
-                    </a>
-                    <p className="text-sm text-muted-foreground mt-2">
-                      We typically respond within 24 hours
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="shadow-card hover:shadow-premium transition-all duration-300">
-                  <CardHeader>
-                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-2">
-                      <Phone className="h-6 w-6 text-accent" />
-                    </div>
-                    <CardTitle>Call Us</CardTitle>
-                    <CardDescription>Speak with our support team</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <a href="tel:+911234567890" className="text-primary hover:underline font-medium">
-                      +91 123 456 7890
-                    </a>
-                    <p className="text-sm text-muted-foreground mt-2">
-                      Mon-Sat: 9:00 AM - 7:00 PM IST
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="shadow-card hover:shadow-premium transition-all duration-300">
-                  <CardHeader>
-                    <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-2">
-                      <MapPin className="h-6 w-6 text-secondary" />
-                    </div>
-                    <CardTitle>Visit Us</CardTitle>
-                    <CardDescription>Our office location</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
-                      New Delhi, India<br />
-                      Pin: 110001
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="shadow-card hover:shadow-premium transition-all duration-300">
-                  <CardHeader>
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
-                      <Clock className="h-6 w-6 text-primary" />
-                    </div>
-                    <CardTitle>Working Hours</CardTitle>
-                    <CardDescription>When we're available</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
-                      <strong>Monday - Saturday:</strong><br />
-                      9:00 AM - 7:00 PM IST<br /><br />
-                      <strong>Sunday:</strong><br />
-                      Closed
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Contact Form */}
-              <div className="lg:col-span-2">
-                <Card className="shadow-premium">
-                  <CardHeader>
-                    <CardTitle className="text-2xl">Send Us a Message</CardTitle>
-                    <CardDescription>
-                      Fill out the form below and we'll get back to you as soon as possible
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <form className="space-y-6">
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div className="space-y-2">
-                          <label className="text-sm font-medium">Full Name *</label>
-                          <Input placeholder="Enter your name" required />
-                        </div>
-                        <div className="space-y-2">
-                          <label className="text-sm font-medium">Email *</label>
-                          <Input type="email" placeholder="your@email.com" required />
-                        </div>
-                      </div>
-
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div className="space-y-2">
-                          <label className="text-sm font-medium">Phone Number</label>
-                          <Input type="tel" placeholder="+91 98765 43210" />
-                        </div>
-                        <div className="space-y-2">
-                          <label className="text-sm font-medium">Subject *</label>
-                          <Input placeholder="How can we help?" required />
-                        </div>
-                      </div>
-
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium">Message *</label>
-                        <Textarea 
-                          placeholder="Tell us more about your query..." 
-                          rows={6}
-                          required 
-                        />
-                      </div>
-
-                      <Button type="submit" size="lg" className="w-full shadow-glow hover:shadow-premium transition-all duration-300">
-                        <Send className="mr-2 h-5 w-5" />
-                        Send Message
-                      </Button>
-                    </form>
-                  </CardContent>
-                </Card>
-
-                {/* App Help Note */}
-                <Card className="mt-6 border-primary/20 bg-primary/5">
-                  <CardContent className="pt-6">
-                    <div className="flex items-start space-x-3">
-                      <MessageCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                      <div>
-                        <h3 className="font-semibold mb-2">Need Immediate Help?</h3>
-                        <p className="text-sm text-muted-foreground mb-3">
-                          Download our mobile app for instant support through in-app chat. 
-                          Our team is available to help you with test-related queries, 
-                          payment issues, or technical problems.
-                        </p>
-                        <Button variant="outline">Download App</Button>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Social Media Section */}
+        {/* Contact Information Cards */}
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6">
-                Connect With <span className="bg-gradient-primary bg-clip-text text-transparent">Us</span>
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold mb-4">
+                  Reach <span className="bg-gradient-primary bg-clip-text text-transparent">Us At</span>
+                </h2>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                {/* Address */}
+                <div className="bg-card p-6 rounded-xl shadow-card hover:shadow-premium transition-all duration-300 group">
+                  <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                    <MapPin className="h-7 w-7 text-primary group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-3">Office Address</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Merit Launchers<br />
+                    First Floor G7/112 Rohini<br />
+                    New Delhi – 110089<br />
+                    India
+                  </p>
+                </div>
+
+                {/* Phone */}
+                <div className="bg-card p-6 rounded-xl shadow-card hover:shadow-premium transition-all duration-300 group">
+                  <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                    <Phone className="h-7 w-7 text-accent group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-3">Call or WhatsApp</h3>
+                  <a href="tel:+919354549654" className="text-muted-foreground hover:text-primary transition-colors block mb-2 font-medium">
+                    +91-9354549654
+                  </a>
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    className="mt-2"
+                    onClick={handleWhatsApp}
+                  >
+                    <MessageCircle className="h-4 w-4 mr-2" />
+                    WhatsApp Us
+                  </Button>
+                </div>
+
+                {/* Email */}
+                <div className="bg-card p-6 rounded-xl shadow-card hover:shadow-premium transition-all duration-300 group">
+                  <div className="w-14 h-14 bg-secondary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:scale-110 transition-all duration-300">
+                    <Mail className="h-7 w-7 text-secondary group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-3">Email</h3>
+                  <a href="mailto:meritlaunchers3@gmail.com" className="text-muted-foreground hover:text-primary transition-colors break-all">
+                    meritlaunchers3@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Website */}
+                <div className="bg-card p-6 rounded-xl shadow-card hover:shadow-premium transition-all duration-300 group">
+                  <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                    <svg className="h-7 w-7 text-primary group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                    </svg>
+                  </div>
+                  <h3 className="font-semibold text-lg mb-3">Website</h3>
+                  <a href="https://www.meritlaunchers.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                    www.meritlaunchers.com
+                  </a>
+                </div>
+
+                {/* Working Hours */}
+                <div className="bg-card p-6 rounded-xl shadow-card hover:shadow-premium transition-all duration-300 group">
+                  <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                    <Clock className="h-7 w-7 text-accent group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-3">Working Hours</h3>
+                  <p className="text-muted-foreground">
+                    <strong>All seven days</strong><br />
+                    9:00 AM to 7:00 PM
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Student Queries Section */}
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-gradient-primary p-1 rounded-2xl">
+                <div className="bg-background p-8 rounded-2xl">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                        <AlertCircle className="h-6 w-6 text-primary" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3">For Student Queries</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        If you're a student facing any difficulty in <strong>logging in, accessing mock tests, or making payments</strong>, please mention your <strong>registered email or phone number</strong> in your message so our support team can help quickly.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Form */}
+        <section className="py-16 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold mb-4">
+                  Send Us a <span className="bg-gradient-primary bg-clip-text text-transparent">Message</span>
+                </h2>
+                <p className="text-muted-foreground">
+                  Fill out the form below and we'll get back to you within 24 hours
+                </p>
+              </div>
+
+              <div className="bg-card p-8 rounded-2xl shadow-card">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label htmlFor="name" className="text-sm font-medium flex items-center gap-2">
+                        <User className="h-4 w-4 text-primary" />
+                        Full Name
+                      </label>
+                      <Input
+                        id="name"
+                        type="text"
+                        placeholder="Enter your name"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        required
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <label htmlFor="email" className="text-sm font-medium flex items-center gap-2">
+                        <Mail className="h-4 w-4 text-primary" />
+                        Email Address
+                      </label>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="your.email@example.com"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label htmlFor="phone" className="text-sm font-medium flex items-center gap-2">
+                      <Phone className="h-4 w-4 text-primary" />
+                      Phone Number
+                    </label>
+                    <Input
+                      id="phone"
+                      type="tel"
+                      placeholder="+91 XXXXX XXXXX"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      required
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label htmlFor="message" className="text-sm font-medium flex items-center gap-2">
+                      <MessageCircle className="h-4 w-4 text-primary" />
+                      Your Message
+                    </label>
+                    <Textarea
+                      id="message"
+                      placeholder="Please include your registered email/phone if you're a student seeking support..."
+                      rows={6}
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      required
+                    />
+                  </div>
+
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full shadow-glow hover:shadow-premium transition-all duration-300"
+                  >
+                    <Send className="h-5 w-5 mr-2" />
+                    Send Message
+                  </Button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Stay Connected - Social Media */}
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl font-bold mb-4">
+                Stay <span className="bg-gradient-primary bg-clip-text text-transparent">Connected</span>
               </h2>
-              <p className="text-muted-foreground mb-8">
-                Follow us on social media for exam updates, preparation tips, and motivational content
+              <p className="text-lg text-muted-foreground mb-8">
+                Follow us on our official platforms for updates, exam notifications, and learning tips
               </p>
-              <div className="flex justify-center items-center space-x-6">
+
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {/* Facebook */}
                 <a 
-                  href="https://facebook.com" 
+                  href="https://facebook.com/MeritLaunchers" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-card rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 shadow-card hover:shadow-premium hover:scale-110"
+                  className="group bg-card p-6 rounded-xl shadow-card hover:shadow-premium transition-all duration-300 border border-transparent hover:border-primary/20"
                 >
-                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                  <div className="w-14 h-14 bg-blue-500/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500 group-hover:scale-110 transition-all duration-300">
+                    <Facebook className="h-7 w-7 text-blue-500 group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="font-semibold">Facebook</h3>
+                  <p className="text-sm text-muted-foreground mt-1">@MeritLaunchers</p>
                 </a>
+
+                {/* Instagram */}
                 <a 
-                  href="https://twitter.com" 
+                  href="https://instagram.com/MeritLaunchers" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-card rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 shadow-card hover:shadow-premium hover:scale-110"
+                  className="group bg-card p-6 rounded-xl shadow-card hover:shadow-premium transition-all duration-300 border border-transparent hover:border-primary/20"
                 >
-                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                  <div className="w-14 h-14 bg-pink-500/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-pink-500 group-hover:scale-110 transition-all duration-300">
+                    <Instagram className="h-7 w-7 text-pink-500 group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="font-semibold">Instagram</h3>
+                  <p className="text-sm text-muted-foreground mt-1">@MeritLaunchers</p>
                 </a>
+
+                {/* YouTube */}
                 <a 
-                  href="https://instagram.com" 
+                  href="https://YouTube.com/@MeritLaunchers" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-card rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 shadow-card hover:shadow-premium hover:scale-110"
+                  className="group bg-card p-6 rounded-xl shadow-card hover:shadow-premium transition-all duration-300 border border-transparent hover:border-primary/20"
                 >
-                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                  <div className="w-14 h-14 bg-red-500/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-red-500 group-hover:scale-110 transition-all duration-300">
+                    <Youtube className="h-7 w-7 text-red-500 group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="font-semibold">YouTube</h3>
+                  <p className="text-sm text-muted-foreground mt-1">@MeritLaunchers</p>
                 </a>
-                <a 
-                  href="https://youtube.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 bg-card rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 shadow-card hover:shadow-premium hover:scale-110"
-                >
-                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                </a>
+
+                {/* Telegram/WhatsApp Channel */}
+                <div className="group bg-card p-6 rounded-xl shadow-card border border-dashed border-muted">
+                  <div className="w-14 h-14 bg-green-500/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <MessageCircle className="h-7 w-7 text-green-500" />
+                  </div>
+                  <h3 className="font-semibold">Telegram / WhatsApp</h3>
+                  <p className="text-sm text-muted-foreground mt-1">Coming Soon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Map Section */}
+        <section className="py-16 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="bg-card p-4 rounded-2xl shadow-card">
+                <div className="aspect-video bg-muted rounded-xl flex items-center justify-center">
+                  <div className="text-center">
+                    <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+                    <p className="text-muted-foreground font-semibold">Find Us Here</p>
+                    <p className="text-sm text-muted-foreground mt-2">
+                      First Floor G7/112 Rohini<br />
+                      New Delhi – 110089
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

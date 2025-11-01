@@ -5,7 +5,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import About from "./pages/About";
-import FeeStructure from "./pages/FeeStructure";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import CLAT from "./pages/courses/CLAT";
@@ -15,6 +14,8 @@ import DSSSB from "./pages/courses/DSSSB";
 import CUET from "./pages/courses/CUET";
 import SSC from "./pages/courses/SSC";
 import ReturnPolicy from "./pages/ReturnPolicy";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,7 +29,6 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
-          <Route path="/fee-structure" element={<FeeStructure />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/courses/clat" element={<CLAT />} />
@@ -38,6 +38,8 @@ const App = () => (
           <Route path="/courses/cuet" element={<CUET />} />
           <Route path="/courses/ssc" element={<SSC />} />
           <Route path="/return-policy" element={<ReturnPolicy />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -26,6 +26,8 @@ const courses = [
 
 const moreLinks = [
   { name: "Return & Cancellation Policy", path: "/return-policy", description: "Our refund and cancellation terms" },
+  { name: "Privacy Policy", path: "/privacy-policy", description: "How we protect your data" },
+  { name: "Terms & Conditions", path: "/terms-conditions", description: "Rules and guidelines for using our services" },
 ];
 
 export default function Navbar() {
@@ -80,12 +82,6 @@ export default function Navbar() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link to="/fee-structure" className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${isActive("/fee-structure") ? "text-primary" : "text-foreground"}`}>
-                    Fee Structure
-                  </Link>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
                   <Link to="/about" className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${isActive("/about") ? "text-primary" : "text-foreground"}`}>
                     About Us
                   </Link>
@@ -136,7 +132,7 @@ export default function Navbar() {
                 </a>
               </Button>
               <Button variant="default" className="shadow-glow hover:shadow-premium transition-all duration-300" asChild>
-                <Link to="/fee-structure">Start Free Test</Link>
+                <Link to="/contact">Get Started</Link>
               </Button>
             </div>
           </div>
@@ -174,14 +170,6 @@ export default function Navbar() {
                 </Link>
               ))}
             </div>
-
-            <Link
-              to="/fee-structure"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${isActive("/fee-structure") ? "bg-primary/10 text-primary" : "hover:bg-accent"}`}
-            >
-              Fee Structure
-            </Link>
 
             <Link
               to="/about"
@@ -229,7 +217,7 @@ export default function Navbar() {
                 </a>
               </Button>
               <Button className="w-full shadow-glow" asChild>
-                <Link to="/fee-structure">Start Free Test</Link>
+                <Link to="/contact">Get Started</Link>
               </Button>
             </div>
           </div>

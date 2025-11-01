@@ -25,6 +25,7 @@ const courses = [
 ];
 
 const moreLinks = [
+  { name: "Fee Structure", path: "/fee-structure", description: "Affordable test preparation pricing" },
   { name: "Return & Cancellation Policy", path: "/return-policy", description: "Our refund and cancellation terms" },
   { name: "Privacy Policy", path: "/privacy-policy", description: "How we protect your data" },
   { name: "Terms & Conditions", path: "/terms-conditions", description: "Rules and guidelines for using our services" },

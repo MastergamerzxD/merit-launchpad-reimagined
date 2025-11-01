@@ -9,6 +9,7 @@ import FeeStructure from "./pages/FeeStructure";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import CLAT from "./pages/courses/CLAT";
+import CTET1 from "./pages/courses/CTET1";
 import CTET2 from "./pages/courses/CTET2";
 import DSSSB from "./pages/courses/DSSSB";
 import CUET from "./pages/courses/CUET";
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/courses/clat" element={<CLAT />} />
+          <Route path="/courses/ctet-1" element={<CTET1 />} />
           <Route path="/courses/ctet-2" element={<CTET2 />} />
           <Route path="/courses/dsssb" element={<DSSSB />} />
           <Route path="/courses/cuet" element={<CUET />} />

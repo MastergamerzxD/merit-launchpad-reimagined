@@ -15,6 +15,7 @@ import logo from "@/assets/merit-launchers-logo.png";
 const courses = [
   { name: "CUET", path: "/courses/cuet", description: "Common University Entrance Test" },
   { name: "CLAT", path: "/courses/clat", description: "Common Law Admission Test" },
+  { name: "CTET Paper I", path: "/courses/ctet-1", description: "Central Teacher Eligibility Test (Class I-V)" },
   { name: "CTET Paper II", path: "/courses/ctet-2", description: "Central Teacher Eligibility Test (Class VI-VIII)" },
   { name: "JEE", path: "/courses/jee", description: "Joint Entrance Examination" },
   { name: "NEET", path: "/courses/neet", description: "National Eligibility Entrance Test" },

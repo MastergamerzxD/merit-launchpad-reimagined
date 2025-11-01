@@ -28,6 +28,7 @@ const moreLinks = [
   { name: "Return & Cancellation Policy", path: "/return-policy", description: "Our refund and cancellation terms" },
   { name: "Privacy Policy", path: "/privacy-policy", description: "How we protect your data" },
   { name: "Terms & Conditions", path: "/terms-conditions", description: "Rules and guidelines for using our services" },
+  { name: "Our Team", path: "/our-team", description: "Meet the minds behind Merit Launchers" },
 ];
 
 export default function Navbar() {

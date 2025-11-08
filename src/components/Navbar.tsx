@@ -25,12 +25,10 @@ const courses = [
 ];
 
 const moreLinks = [
-  { name: "Fee Structure", path: "/fee-structure", description: "Affordable test preparation pricing" },
   { name: "External Links", path: "/external-links", description: "Official exam resources and links" },
   { name: "Return & Cancellation Policy", path: "/return-policy", description: "Our refund and cancellation terms" },
   { name: "Privacy Policy", path: "/privacy-policy", description: "How we protect your data" },
   { name: "Terms & Conditions", path: "/terms-conditions", description: "Rules and guidelines for using our services" },
-  { name: "Our Team", path: "/our-team", description: "Meet the minds behind Merit Launchers" },
   { name: "Important Tips", path: "/important-tips", description: "Guidelines for website development" },
 ];
 
@@ -106,6 +104,18 @@ export default function Navbar() {
                 <NavigationMenuItem>
                   <Link to="/faq" className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${isActive("/faq") ? "text-primary" : "text-foreground"}`}>
                     FAQ
+                  </Link>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <Link to="/fee-structure" className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${isActive("/fee-structure") ? "text-primary" : "text-foreground"}`}>
+                    Fee Structure
+                  </Link>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <Link to="/our-team" className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${isActive("/our-team") ? "text-primary" : "text-foreground"}`}>
+                    Our Team
                   </Link>
                 </NavigationMenuItem>
 
@@ -211,6 +221,22 @@ export default function Navbar() {
               className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${isActive("/faq") ? "bg-primary/10 text-primary" : "hover:bg-accent"}`}
             >
               FAQ
+            </Link>
+
+            <Link
+              to="/fee-structure"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${isActive("/fee-structure") ? "bg-primary/10 text-primary" : "hover:bg-accent"}`}
+            >
+              Fee Structure
+            </Link>
+
+            <Link
+              to="/our-team"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${isActive("/our-team") ? "bg-primary/10 text-primary" : "hover:bg-accent"}`}
+            >
+              Our Team
             </Link>
 
             <div className="space-y-2">

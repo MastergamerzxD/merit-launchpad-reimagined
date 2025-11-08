@@ -71,9 +71,9 @@ const courses = [
 
 export default function CoursesSection() {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-8 md:py-10 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Popular <span className="bg-gradient-primary bg-clip-text text-transparent">Courses</span>
           </h2>
@@ -111,7 +111,7 @@ export default function CoursesSection() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-8">
           <Button size="lg" variant="outline" asChild>
             <a href="https://play.google.com/store/apps/details?id=co.robin.qibrw&hl=en" target="_blank" rel="noopener noreferrer">
               View All Courses

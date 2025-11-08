@@ -4,7 +4,7 @@ import { Zap, ArrowRight, CheckCircle } from "lucide-react";
 
 export default function CTASection() {
   return (
-    <section className="py-20 bg-gradient-primary relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-gradient-primary relative overflow-hidden">
       {/* Animated Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-20 -left-20 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-float"></div>
@@ -14,22 +14,22 @@ export default function CTASection() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center text-white">
-          <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6 animate-fade-in">
+          <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4 animate-fade-in">
             <Zap className="h-4 w-4" />
             <span className="text-sm font-medium">Start Your Journey Today</span>
           </div>
 
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up leading-tight" style={{ animationDelay: "0.1s" }}>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 animate-fade-in-up leading-tight" style={{ animationDelay: "0.1s" }}>
             Ready to Launch Your Merit?
           </h2>
 
-          <p className="text-lg md:text-xl mb-10 text-white/90 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-base md:text-lg mb-6 text-white/90 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             Join thousands of successful students who transformed their exam preparation 
             with Merit Launchers. Start with a completely free mock test today!
           </p>
 
           {/* Benefits List */}
-          <div className="grid md:grid-cols-3 gap-6 mb-10 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          <div className="grid md:grid-cols-3 gap-4 mb-6 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <div className="flex items-center justify-center space-x-2 text-white/90">
               <CheckCircle className="h-5 w-5 flex-shrink-0" />
               <span className="text-sm font-medium">No Credit Card Required</span>
@@ -45,7 +45,7 @@ export default function CTASection() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up mb-12" style={{ animationDelay: "0.4s" }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up mb-8" style={{ animationDelay: "0.4s" }}>
             <Button 
               size="lg" 
               variant="secondary"
@@ -72,7 +72,7 @@ export default function CTASection() {
           </div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-white/20 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-white/20 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-1">100%</div>
               <div className="text-sm text-white/80">Free to Start</div>

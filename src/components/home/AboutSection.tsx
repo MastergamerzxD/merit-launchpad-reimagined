@@ -2,9 +2,9 @@ import { Target, Users, Award } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section className="py-16 bg-background">
+    <section className="py-8 md:py-10 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-12">
+        <div className="max-w-3xl mx-auto text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             About <span className="bg-gradient-primary bg-clip-text text-transparent">Merit Launchers</span>
           </h2>
@@ -13,7 +13,7 @@ export default function AboutSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
+        <div className="grid md:grid-cols-3 gap-6 mt-8">
           <div className="text-center group">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
               <Target className="h-8 w-8 text-primary group-hover:text-white transition-colors" />

@@ -3,7 +3,7 @@ import studentsCelebrating from "@/assets/students-celebrating.jpg";
 
 export default function SuccessStoriesSection() {
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-background relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{ 
@@ -13,7 +13,7 @@ export default function SuccessStoriesSection() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Image Side */}
           <div className="relative order-2 lg:order-1">
             <div className="relative rounded-2xl overflow-hidden shadow-premium hover:shadow-glow transition-all duration-500">
@@ -55,22 +55,22 @@ export default function SuccessStoriesSection() {
 
           {/* Content Side */}
           <div className="order-1 lg:order-2">
-            <div className="inline-flex items-center space-x-2 bg-accent/10 text-accent px-4 py-2 rounded-full mb-6 animate-fade-in">
+            <div className="inline-flex items-center space-x-2 bg-accent/10 text-accent px-4 py-2 rounded-full mb-4 animate-fade-in">
               <Sparkles className="h-4 w-4" />
               <span className="text-sm font-medium">Real Results, Real Success</span>
             </div>
 
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Join <span className="bg-gradient-primary bg-clip-text text-transparent">50,000+ Students</span> Who Achieved Their Dreams
             </h2>
 
-            <p className="text-lg text-muted-foreground mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <p className="text-base text-muted-foreground mb-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               From struggling with basics to securing top ranks in competitive exams - 
               our students have transformed their futures with dedicated practice and 
               Merit Launchers' comprehensive mock test platform.
             </p>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               <div className="flex items-start space-x-4 p-4 bg-card rounded-lg shadow-card hover:shadow-premium transition-all duration-300 animate-fade-in" style={{ animationDelay: "0.3s" }}>
                 <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                   <Trophy className="h-6 w-6 text-primary" />

@@ -34,9 +34,9 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-8 md:py-10 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             What Our <span className="bg-gradient-primary bg-clip-text text-transparent">Students Say</span>
           </h2>

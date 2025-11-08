@@ -63,7 +63,7 @@ const features = [
 
 export default function WhyChooseSection() {
   return (
-    <section className="py-20 bg-muted/30 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-muted/30 relative overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
@@ -71,7 +71,7 @@ export default function WhyChooseSection() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Why Choose <span className="bg-gradient-primary bg-clip-text text-transparent">Merit Launchers</span>
           </h2>
@@ -81,7 +81,7 @@ export default function WhyChooseSection() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {features.map((feature, index) => (
             <div
               key={feature.title}
@@ -102,7 +102,7 @@ export default function WhyChooseSection() {
         </div>
 
         {/* Image Showcase */}
-        <div className="grid md:grid-cols-2 gap-8 mt-16">
+        <div className="grid md:grid-cols-2 gap-6 mt-8">
           <div className="relative group">
             <div className="relative rounded-2xl overflow-hidden shadow-premium hover:shadow-glow transition-all duration-500">
               <img 

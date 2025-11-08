@@ -1,7 +1,23 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/merit-launchers-logo.png";
+
+const ScrollToTopLink = ({ to, children, className }: { to: string; children: React.ReactNode; className?: string }) => {
+  const navigate = useNavigate();
+  
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate(to);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  
+  return (
+    <a href={to} onClick={handleClick} className={className}>
+      {children}
+    </a>
+  );
+};
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -33,12 +49,12 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">Home</Link></li>
-              <li><Link to="/about" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">About Us</Link></li>
-              <li><Link to="/blog" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">Blog</Link></li>
-              <li><Link to="/contact" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">Contact Us</Link></li>
-              <li><Link to="/faq" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">FAQ</Link></li>
-              <li><Link to="/fee-structure" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">Fee Structure</Link></li>
+              <li><ScrollToTopLink to="/" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">Home</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/about" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">About Us</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/blog" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">Blog</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/contact" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">Contact Us</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/faq" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">FAQ</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/fee-structure" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">Fee Structure</ScrollToTopLink></li>
             </ul>
           </div>
 
@@ -46,15 +62,15 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Popular Courses</h3>
             <ul className="space-y-2">
-              <li><Link to="/courses/cuet" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">CUET Mock Tests</Link></li>
-              <li><Link to="/courses/clat" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">CLAT Preparation</Link></li>
-              <li><Link to="/courses/ctet-1" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">CTET Paper I</Link></li>
-              <li><Link to="/courses/ctet-2" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">CTET Paper II</Link></li>
-              <li><Link to="/courses/jee" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">JEE Practice Tests</Link></li>
-              <li><Link to="/courses/neet" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">NEET Mock Series</Link></li>
-              <li><Link to="/courses/ipmat" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">IPMAT Preparation</Link></li>
-              <li><Link to="/courses/ssc" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">SSC Exams</Link></li>
-              <li><Link to="/courses/dsssb" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">DSSSB Tests</Link></li>
+              <li><ScrollToTopLink to="/courses/cuet" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">CUET Mock Tests</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/courses/clat" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">CLAT Preparation</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/courses/ctet-1" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">CTET Paper I</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/courses/ctet-2" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">CTET Paper II</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/courses/jee" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">JEE Practice Tests</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/courses/neet" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">NEET Mock Series</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/courses/ipmat" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">IPMAT Preparation</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/courses/ssc" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">SSC Exams</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/courses/dsssb" className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all">DSSSB Tests</ScrollToTopLink></li>
             </ul>
           </div>
 
@@ -105,10 +121,10 @@ export default function Footer() {
               © {currentYear} Merit Launchers. All rights reserved.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-sm opacity-75">
-              <Link to="/privacy-policy" className="hover:opacity-100 hover:text-primary transition-all">Privacy Policy</Link>
-              <Link to="/terms-conditions" className="hover:opacity-100 hover:text-primary transition-all">Terms & Conditions</Link>
-              <Link to="/return-policy" className="hover:opacity-100 hover:text-primary transition-all">Return Policy</Link>
-              <Link to="/external-links" className="hover:opacity-100 hover:text-primary transition-all">External Links</Link>
+              <ScrollToTopLink to="/privacy-policy" className="hover:opacity-100 hover:text-primary transition-all">Privacy Policy</ScrollToTopLink>
+              <ScrollToTopLink to="/terms-conditions" className="hover:opacity-100 hover:text-primary transition-all">Terms & Conditions</ScrollToTopLink>
+              <ScrollToTopLink to="/return-policy" className="hover:opacity-100 hover:text-primary transition-all">Return Policy</ScrollToTopLink>
+              <ScrollToTopLink to="/external-links" className="hover:opacity-100 hover:text-primary transition-all">External Links</ScrollToTopLink>
             </div>
           </div>
         </div>

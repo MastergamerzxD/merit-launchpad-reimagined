@@ -149,6 +149,16 @@ All colors MUST be HSL.
     scroll-behavior: smooth;
   }
 
+  /* Reduced global spacing for sections */
+  section {
+    @apply py-10 md:py-12;
+  }
+  
+  /* Tighter container spacing */
+  .container {
+    @apply px-3 md:px-4;
+  }
+
   /* Improve readability on mobile */
   p, li, span {
     @apply leading-relaxed;

@@ -14,17 +14,17 @@ export default function HeroSection() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 items-center py-8 md:py-12">
+        <div className="grid lg:grid-cols-2 gap-6 items-center py-4 md:py-6">
           {/* Left Content */}
           <div className="text-center lg:text-left">
             {/* Badge */}
-            <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4 animate-fade-in">
+            <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-2 animate-fade-in">
               <Zap className="h-4 w-4" />
               <span className="text-sm font-medium">One Free Mock Test for Every Course</span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in-up leading-tight" style={{ animationDelay: "0.1s" }}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 animate-fade-in-up leading-tight" style={{ animationDelay: "0.1s" }}>
               <span className="bg-gradient-primary bg-clip-text text-transparent">Practice Smart.</span>
               <br />
               <span className="text-foreground">Perform Better.</span>
@@ -33,13 +33,13 @@ export default function HeroSection() {
             </h1>
 
             {/* Subheading */}
-            <p className="text-base md:text-lg text-muted-foreground mb-6 max-w-2xl mx-auto lg:mx-0 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <p className="text-base md:text-lg text-muted-foreground mb-4 max-w-2xl mx-auto lg:mx-0 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               India's comprehensive mock test platform for CUET, CLAT, JEE, NEET, SSC, DSSSB & more. 
               Get instant results, detailed analytics, and expert guidance.
             </p>
 
             {/* CTA Button */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-fade-in-up mb-8" style={{ animationDelay: "0.3s" }}>
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 animate-fade-in-up mb-4" style={{ animationDelay: "0.3s" }}>
             <Button 
               size="lg" 
               className="shadow-glow hover:shadow-premium transition-all duration-300 text-lg px-8 py-6 animate-pulse-glow"
@@ -64,7 +64,7 @@ export default function HeroSection() {
             </div>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+            <div className="grid grid-cols-3 gap-3 max-w-md mx-auto lg:mx-0 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
               <div className="text-center lg:text-left">
                 <div className="flex items-center justify-center lg:justify-start space-x-2 mb-1">
                   <Users className="h-5 w-5 text-primary" />
@@ -115,7 +115,7 @@ export default function HeroSection() {
         </div>
 
         {/* Trust Indicators */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pb-8 animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pb-4 animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
           <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 shadow-card hover:shadow-premium transition-all duration-300 hover:scale-105 text-center">
             <div className="text-3xl font-bold text-primary mb-2">50,000+</div>
             <div className="text-sm text-muted-foreground">Active Students</div>

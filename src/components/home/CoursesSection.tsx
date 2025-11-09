@@ -71,10 +71,10 @@ const courses = [
 
 export default function CoursesSection() {
   return (
-    <section className="py-8 md:py-10 bg-muted/30">
+    <section className="py-3 md:py-4 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2">
             Popular <span className="bg-gradient-primary bg-clip-text text-transparent">Courses</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -82,7 +82,7 @@ export default function CoursesSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {courses.map((course, index) => (
             <Card 
               key={course.path}
@@ -111,7 +111,7 @@ export default function CoursesSection() {
           ))}
         </div>
 
-        <div className="text-center mt-8">
+        <div className="text-center mt-4">
           <Button size="lg" variant="outline" asChild>
             <a href="https://play.google.com/store/apps/details?id=co.robin.qibrw&hl=en" target="_blank" rel="noopener noreferrer">
               View All Courses

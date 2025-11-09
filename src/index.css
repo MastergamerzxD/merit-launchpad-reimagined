@@ -151,7 +151,7 @@ All colors MUST be HSL.
 
   /* Reduced global spacing for sections */
   section {
-    @apply py-8 md:py-10;
+    @apply py-3 md:py-4;
   }
   
   /* Tighter container spacing */

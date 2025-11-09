@@ -63,7 +63,7 @@ const features = [
 
 export default function WhyChooseSection() {
   return (
-    <section className="py-8 md:py-10 bg-muted/30 relative overflow-hidden">
+    <section className="py-3 md:py-4 bg-muted/30 relative overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
@@ -71,8 +71,8 @@ export default function WhyChooseSection() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold mb-2">
             Why Choose <span className="bg-gradient-primary bg-clip-text text-transparent">Merit Launchers</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -81,14 +81,14 @@ export default function WhyChooseSection() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
           {features.map((feature, index) => (
             <div
               key={feature.title}
               className="group p-6 rounded-xl bg-card shadow-card hover:shadow-premium transition-all duration-300 hover:-translate-y-2 animate-fade-in"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              <div className={`inline-flex items-center justify-center w-14 h-14 rounded-lg mb-4 ${feature.bgColor} group-hover:scale-110 transition-transform duration-300`}>
+              <div className={`inline-flex items-center justify-center w-14 h-14 rounded-lg mb-3 ${feature.bgColor} group-hover:scale-110 transition-transform duration-300`}>
                 <feature.icon className={`h-7 w-7 ${feature.color}`} />
               </div>
               <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
@@ -102,7 +102,7 @@ export default function WhyChooseSection() {
         </div>
 
         {/* Image Showcase */}
-        <div className="grid md:grid-cols-2 gap-6 mt-8">
+        <div className="grid md:grid-cols-2 gap-4 mt-4">
           <div className="relative group">
             <div className="relative rounded-2xl overflow-hidden shadow-premium hover:shadow-glow transition-all duration-500">
               <img 

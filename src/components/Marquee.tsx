@@ -1,7 +1,7 @@
 export default function Marquee() {
   return (
     <div className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] animate-[gradient_3s_linear_infinite] overflow-hidden py-2">
-      <div className="animate-[scroll_20s_linear_infinite] whitespace-nowrap">
+      <div className="animate-[scroll_12s_linear_infinite] md:animate-[scroll_20s_linear_infinite] whitespace-nowrap">
         <span className="inline-block text-primary-foreground font-semibold text-sm md:text-base px-4">
           💥 Premium Mock Tests on our App "Meritlaunchers" — at Nominal Prices for CUET, CLAT, CTET, IPMAT, SSC & DSSSB! 🚀
           🌟 Pioneers in competitive exam preparation — trusted by achievers nationwide!

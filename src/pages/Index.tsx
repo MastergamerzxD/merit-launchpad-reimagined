@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import Marquee from "@/components/Marquee";
 import HeroSection from "@/components/home/HeroSection";
 import AboutSection from "@/components/home/AboutSection";
 import CoursesSection from "@/components/home/CoursesSection";
@@ -18,6 +19,7 @@ export default function Index() {
         keywords="CUET mock test, CLAT practice series, JEE mock test 2025, NEET online test, SSC mock test, DSSSB preparation, CTET mock test, IPMAT preparation"
       />
       <Navbar />
+      <Marquee />
       <main>
         <HeroSection />
         <AboutSection />

@@ -64,6 +64,14 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        gradient: {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
         "accordion-down": {
           from: { height: "0", opacity: "0" },
           to: { height: "var(--radix-accordion-content-height)", opacity: "1" },

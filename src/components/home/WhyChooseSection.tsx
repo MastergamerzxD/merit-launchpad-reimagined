@@ -63,7 +63,7 @@ const features = [
 
 export default function WhyChooseSection() {
   return (
-    <section className="py-3 md:py-4 bg-muted/30 relative overflow-hidden">
+    <section className="py-2 md:py-3 bg-muted/30 relative overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
@@ -71,30 +71,30 @@ export default function WhyChooseSection() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-4">
-          <h2 className="text-3xl md:text-5xl font-bold mb-2">
+        <div className="text-center mb-3">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">
             Why Choose <span className="bg-gradient-primary bg-clip-text text-transparent">Merit Launchers</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
             Powerful features designed to give you the best exam preparation experience
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3 mb-3">
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className="group p-6 rounded-xl bg-card shadow-card hover:shadow-premium transition-all duration-300 hover:-translate-y-2 animate-fade-in"
+              className="group p-4 rounded-xl bg-card shadow-card hover:shadow-premium transition-all duration-300 hover:-translate-y-2 animate-fade-in"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              <div className={`inline-flex items-center justify-center w-14 h-14 rounded-lg mb-3 ${feature.bgColor} group-hover:scale-110 transition-transform duration-300`}>
-                <feature.icon className={`h-7 w-7 ${feature.color}`} />
+              <div className={`inline-flex items-center justify-center w-10 h-10 rounded-lg mb-2 ${feature.bgColor} group-hover:scale-110 transition-transform duration-300`}>
+                <feature.icon className={`h-5 w-5 ${feature.color}`} />
               </div>
-              <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+              <h3 className="text-base font-semibold mb-1 group-hover:text-primary transition-colors">
                 {feature.title}
               </h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-xs text-muted-foreground">
                 {feature.description}
               </p>
             </div>
@@ -102,18 +102,18 @@ export default function WhyChooseSection() {
         </div>
 
         {/* Image Showcase */}
-        <div className="grid md:grid-cols-2 gap-4 mt-4">
+        <div className="grid md:grid-cols-2 gap-3 mt-3">
           <div className="relative group">
             <div className="relative rounded-2xl overflow-hidden shadow-premium hover:shadow-glow transition-all duration-500">
               <img 
                 src={studentStudying} 
                 alt="Student preparing for exams with Merit Launchers"
-                className="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"
+                className="w-full h-[300px] object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
                 <div className="text-white">
-                  <h3 className="text-2xl font-bold mb-2">Study Smart</h3>
-                  <p className="text-sm text-white/90">Practice with purpose using our analytics-driven approach</p>
+                  <h3 className="text-xl font-bold mb-1">Study Smart</h3>
+                  <p className="text-xs text-white/90">Practice with purpose using our analytics-driven approach</p>
                 </div>
               </div>
             </div>
@@ -124,12 +124,12 @@ export default function WhyChooseSection() {
               <img 
                 src={digitalLearning} 
                 alt="Digital learning platform for competitive exams"
-                className="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"
+                className="w-full h-[300px] object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
                 <div className="text-white">
-                  <h3 className="text-2xl font-bold mb-2">Learn Anywhere</h3>
-                  <p className="text-sm text-white/90">Access your tests on any device, anytime you want</p>
+                  <h3 className="text-xl font-bold mb-1">Learn Anywhere</h3>
+                  <p className="text-xs text-white/90">Access your tests on any device, anytime you want</p>
                 </div>
               </div>
             </div>

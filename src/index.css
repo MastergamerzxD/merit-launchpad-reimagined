@@ -156,12 +156,17 @@ All colors MUST be HSL.
 
   /* Reduced global spacing for sections */
   section {
-    @apply py-3 md:py-4;
+    @apply py-2 md:py-3;
   }
   
   /* Tighter container spacing */
   .container {
     @apply px-3 md:px-4;
+  }
+  
+  /* Reduce card padding */
+  .card {
+    @apply p-3;
   }
 
   /* Improve readability on mobile */

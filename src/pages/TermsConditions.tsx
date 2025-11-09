@@ -162,7 +162,7 @@ export default function TermsConditions() {
                       <Card className="bg-primary/5 border-primary/20">
                         <CardContent className="p-6">
                           <p className="text-muted-foreground">
-                            In case of issues, users can email <strong className="text-primary">meritlaunchers3@gmail.com</strong> with proof of payment.
+                            In case of issues, users can email <strong className="text-primary">info@meritlaunchers.com</strong> with proof of payment.
                           </p>
                         </CardContent>
                       </Card>
@@ -338,9 +338,9 @@ export default function TermsConditions() {
               </p>
               
               <Button size="lg" className="shadow-glow hover:shadow-premium transition-all duration-300" asChild>
-                <a href="mailto:meritlaunchers3@gmail.com" className="flex items-center gap-2">
+                <a href="mailto:info@meritlaunchers.com" className="flex items-center gap-2">
                   <Mail className="h-5 w-5" />
-                  meritlaunchers3@gmail.com
+                  info@meritlaunchers.com
                 </a>
               </Button>
             </div>

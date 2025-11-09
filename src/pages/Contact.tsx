@@ -34,7 +34,7 @@ export default function Contact() {
     <div className="min-h-screen">
       <SEO 
         title="Contact Us - Merit Launchers | Get Support & Start Preparation"
-        description="Get in touch with Merit Launchers. Contact us for course inquiries, technical support, or partnership opportunities. Email: meritlaunchers3@gmail.com | Phone: +91 93549 02925"
+        description="Get in touch with Merit Launchers. Contact us for course inquiries, technical support, or partnership opportunities. Email: info@meritlaunchers.com | Phone: +91 93549 02925"
         keywords="contact merit launchers, support, mock test help, course inquiry, customer service"
       />
       <Navbar />
@@ -122,8 +122,8 @@ export default function Contact() {
                     <Mail className="h-7 w-7 text-secondary group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="font-semibold text-lg mb-3">Email</h3>
-                  <a href="mailto:meritlaunchers3@gmail.com" className="text-muted-foreground hover:text-primary transition-colors break-all">
-                    meritlaunchers3@gmail.com
+                  <a href="mailto:info@meritlaunchers.com" className="text-muted-foreground hover:text-primary transition-colors break-all">
+                    info@meritlaunchers.com
                   </a>
                 </div>
               </div>

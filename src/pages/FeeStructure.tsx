@@ -182,7 +182,7 @@ export default function FeeStructure() {
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
                     <span className="text-primary text-sm font-bold">•</span>
                   </div>
-                  <p className="text-muted-foreground">All refund requests must be made in writing to <a href="mailto:meritlaunchers3@gmail.com" className="text-primary hover:underline font-medium">meritlaunchers3@gmail.com</a> within 7 working days of the transaction.</p>
+                  <p className="text-muted-foreground">All refund requests must be made in writing to <a href="mailto:info@meritlaunchers.com" className="text-primary hover:underline font-medium">info@meritlaunchers.com</a> within 7 working days of the transaction.</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">

@@ -189,9 +189,9 @@ export default function PrivacyPolicy() {
                     To exercise these rights, contact us at:
                   </p>
                   <Button size="lg" variant="default" className="shadow-glow hover:shadow-premium transition-all duration-300" asChild>
-                    <a href="mailto:meritlaunchers3@gmail.com" className="flex items-center gap-2">
+                    <a href="mailto:info@meritlaunchers.com" className="flex items-center gap-2">
                       <Mail className="h-5 w-5" />
-                      meritlaunchers3@gmail.com
+                      info@meritlaunchers.com
                     </a>
                   </Button>
                 </CardContent>
@@ -265,9 +265,9 @@ export default function PrivacyPolicy() {
               </p>
               
               <Button size="lg" className="shadow-glow hover:shadow-premium transition-all duration-300" asChild>
-                <a href="mailto:meritlaunchers3@gmail.com" className="flex items-center gap-2">
+                <a href="mailto:info@meritlaunchers.com" className="flex items-center gap-2">
                   <Mail className="h-5 w-5" />
-                  meritlaunchers3@gmail.com
+                  info@meritlaunchers.com
                 </a>
               </Button>
             </div>

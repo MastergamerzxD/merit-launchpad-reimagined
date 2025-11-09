@@ -23,7 +23,7 @@ export default function ReturnPolicy() {
     {
       step: 1,
       title: "Send an Email",
-      description: "Email meritlaunchers3@gmail.com with your full name, registered email, phone number, transaction ID or payment screenshot, and reason for refund request"
+      description: "Email info@meritlaunchers.com with your full name, registered email, phone number, transaction ID or payment screenshot, and reason for refund request"
     },
     {
       step: 2,

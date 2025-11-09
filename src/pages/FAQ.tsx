@@ -95,7 +95,7 @@ export default function FAQ() {
               <Mail className="h-12 w-12 text-primary mx-auto mb-6" />
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Still Have Questions?</h2>
               <p className="text-lg text-muted-foreground mb-8">
-                You may ask through our e-mail: <a href="mailto:meritlaunchers3@gmail.com" className="text-primary hover:underline font-medium">meritlaunchers3@gmail.com</a>
+                You may ask through our e-mail: <a href="mailto:info@meritlaunchers.com" className="text-primary hover:underline font-medium">info@meritlaunchers.com</a>
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button size="lg" variant="default" asChild>

@@ -170,9 +170,9 @@ export default function OurTeam() {
               </p>
               
               <Button size="lg" className="shadow-glow hover:shadow-premium transition-all duration-300" asChild>
-                <a href="mailto:meritlaunchers3@gmail.com" className="flex items-center gap-2">
+                <a href="mailto:info@meritlaunchers.com" className="flex items-center gap-2">
                   <Mail className="h-5 w-5" />
-                  Write to us at meritlaunchers3@gmail.com
+                  Write to us at info@meritlaunchers.com
                 </a>
               </Button>
             </div>

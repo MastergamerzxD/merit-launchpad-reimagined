@@ -49,38 +49,21 @@ export default function OurTeam() {
       
       <main>
         {/* Hero Section */}
-        <section className="relative bg-gradient-hero py-24 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(6,182,212,0.15),transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(251,146,60,0.15),transparent_50%)]"></div>
-          
+        <section className="relative bg-gradient-hero py-12 overflow-hidden">
           <div className="container mx-auto px-4 relative">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 bg-gradient-primary p-1 rounded-full mb-6 animate-float">
-                <div className="bg-background px-6 py-2 rounded-full flex items-center gap-2">
-                  <Users className="h-5 w-5 text-primary" />
-                  <span className="text-sm font-semibold bg-gradient-primary bg-clip-text text-transparent">
-                    Meet Our Team
-                  </span>
-                </div>
-              </div>
-              
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+              <h1 className="text-4xl font-bold mb-4">
                 Our <span className="bg-gradient-primary bg-clip-text text-transparent">Team</span>
               </h1>
-              
-              <p className="text-2xl font-semibold mb-4 text-primary">
-                Meet the Minds Behind Merit Launchers
-              </p>
-              
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                At Merit Launchers, we believe that success isn't accidental — it's the result of expert guidance, dedication, and continuous practice.
+              <p className="text-lg text-muted-foreground">
+                Meet the minds behind Merit Launchers
               </p>
             </div>
           </div>
         </section>
 
-        {/* Introduction */}
-        <section className="py-16 bg-background">
+        {/* Team Overview */}
+        <section className="py-8 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <Card className="shadow-card hover:shadow-premium transition-all duration-300 border-primary/20">

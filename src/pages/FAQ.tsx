@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { Download, HelpCircle, Mail } from "lucide-react";
+import { Download } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -48,37 +48,34 @@ export default function FAQ() {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="bg-gradient-primary text-white py-20">
+        <section className="bg-gradient-primary text-white py-10">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm mb-6">
-                <HelpCircle className="h-10 w-10" />
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up">
+              <h1 className="text-4xl font-bold mb-3">
                 Frequently Asked Questions
               </h1>
-              <p className="text-xl md:text-2xl text-white/90 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-                Find answers to common questions about Merit Launchers
+              <p className="text-lg text-white/90">
+                Quick answers to common questions
               </p>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 bg-background">
+        <section className="py-8 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <Accordion type="single" collapsible className="w-full space-y-4">
+              <Accordion type="single" collapsible className="w-full space-y-3">
                 {faqs.map((faq, index) => (
                   <AccordionItem 
                     key={index} 
                     value={`item-${index}`}
-                    className="bg-card border border-border rounded-lg px-6 shadow-sm hover:shadow-md transition-shadow"
+                    className="bg-card border border-border rounded-lg px-6 shadow-sm"
                   >
-                    <AccordionTrigger className="text-left text-lg font-semibold hover:text-primary">
+                    <AccordionTrigger className="text-left font-semibold hover:text-primary">
                       Q{index + 1}: {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground pt-2">
+                    <AccordionContent className="text-muted-foreground pt-2 text-sm">
                       A: {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -89,24 +86,19 @@ export default function FAQ() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-16 bg-secondary/30">
+        <section className="py-8 bg-secondary/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <Mail className="h-12 w-12 text-primary mx-auto mb-6" />
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Still Have Questions?</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                You may ask through our e-mail: <a href="mailto:info@meritlaunchers.com" className="text-primary hover:underline font-medium">info@meritlaunchers.com</a>
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl font-bold mb-4">Still Have Questions?</h2>
+              <p className="text-muted-foreground mb-6">
+                Email: <a href="mailto:info@meritlaunchers.com" className="text-primary hover:underline font-medium">info@meritlaunchers.com</a>
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button size="lg" variant="default" asChild>
-                  <Link to="/contact">
-                    Contact Us
-                  </Link>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <Button size="default" variant="default" asChild>
+                  <Link to="/contact">Contact Us</Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link to="/fee-structure">
-                    View Fee Structure
-                  </Link>
+                <Button size="default" variant="outline" asChild>
+                  <Link to="/fee-structure">View Fees</Link>
                 </Button>
               </div>
             </div>
@@ -114,17 +106,17 @@ export default function FAQ() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-primary text-white">
+        <section className="py-8 bg-gradient-primary text-white">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">Begin Your Journey</h2>
-              <p className="text-lg md:text-xl mb-10 text-white/90">
-                Experience smart preparation with Merit Launchers
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl font-bold mb-4">Begin Your Journey</h2>
+              <p className="text-lg mb-6 text-white/90">
+                Download the Merit Launchers App
               </p>
-              <Button size="lg" variant="secondary" className="shadow-premium text-lg px-8 py-6" asChild>
+              <Button size="lg" variant="secondary" asChild>
                 <a href={appLink} target="_blank" rel="noopener noreferrer">
                   <Download className="mr-2 h-5 w-5" />
-                  Download the Merit Launchers App
+                  Download App
                 </a>
               </Button>
             </div>

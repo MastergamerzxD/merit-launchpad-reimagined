@@ -120,6 +120,12 @@ export default function Navbar() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
+                  <Link to="/videos" className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${isActive("/videos") ? "text-primary" : "text-foreground"}`}>
+                    Videos
+                  </Link>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-sm font-medium">More</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4 bg-popover">
@@ -237,6 +243,14 @@ export default function Navbar() {
               className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${isActive("/our-team") ? "bg-primary/10 text-primary" : "hover:bg-accent"}`}
             >
               Our Team
+            </Link>
+
+            <Link
+              to="/videos"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${isActive("/videos") ? "bg-primary/10 text-primary" : "hover:bg-accent"}`}
+            >
+              Videos
             </Link>
 
             <div className="space-y-2">

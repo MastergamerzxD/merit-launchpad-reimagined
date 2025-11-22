@@ -24,6 +24,7 @@ import ImportantTips from "./pages/ImportantTips";
 import FeeStructure from "./pages/FeeStructure";
 import FAQ from "./pages/FAQ";
 import ExternalLinks from "./pages/ExternalLinks";
+import Videos from "./pages/Videos";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -56,6 +57,7 @@ const App = () => (
           <Route path="/fee-structure" element={<FeeStructure />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/external-links" element={<ExternalLinks />} />
+          <Route path="/videos" element={<Videos />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

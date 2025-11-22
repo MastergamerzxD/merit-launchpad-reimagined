@@ -6,8 +6,7 @@
 // 4. Restrict the key to YouTube Data API v3 and your domain for security
 
 export const YOUTUBE_CONFIG = {
-  // Replace with your YouTube Data API key
-  API_KEY: "YOUR_YOUTUBE_API_KEY_HERE",
+  API_KEY: "AIzaSyAMHemQqeIJRr2cE1IWTYKz1pV40fYgaTU",
   CHANNEL_HANDLE: "merit_launchers",
   MAX_RESULTS: 50,
 };

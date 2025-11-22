@@ -1,8 +1,11 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Zap, ArrowRight, CheckCircle } from "lucide-react";
+import CoursesDialog from "@/components/CoursesDialog";
 
 export default function CTASection() {
+  const [coursesDialogOpen, setCoursesDialogOpen] = useState(false);
+
   return (
     <section className="py-2 md:py-3 bg-gradient-primary relative overflow-hidden">
       {/* Animated Decorative Elements */}
@@ -63,11 +66,9 @@ export default function CTASection() {
               size="default" 
               variant="outline"
               className="text-sm px-6 py-5 border-2 border-white bg-transparent text-white hover:bg-white hover:text-primary transition-all duration-300"
-              asChild
+              onClick={() => setCoursesDialogOpen(true)}
             >
-              <Link to="/about">
-                View All Courses
-              </Link>
+              View All Courses
             </Button>
           </div>
 
@@ -92,6 +93,8 @@ export default function CTASection() {
           </div>
         </div>
       </div>
+
+      <CoursesDialog open={coursesDialogOpen} onOpenChange={setCoursesDialogOpen} />
     </section>
   );
 }

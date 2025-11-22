@@ -110,15 +110,6 @@ export default function CoursesSection() {
             </Card>
           ))}
         </div>
-
-        <div className="text-center mt-3">
-          <Button size="lg" variant="outline" asChild>
-            <a href="https://play.google.com/store/apps/details?id=co.robin.qibrw&hl=en" target="_blank" rel="noopener noreferrer">
-              View All Courses
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-          </Button>
-        </div>
       </div>
     </section>
   );

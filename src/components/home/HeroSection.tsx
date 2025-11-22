@@ -1,9 +1,12 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Zap, TrendingUp, Award, Users } from "lucide-react";
 import examHall from "@/assets/exam-hall.png";
+import CoursesDialog from "@/components/CoursesDialog";
 
 export default function HeroSection() {
+  const [coursesDialogOpen, setCoursesDialogOpen] = useState(false);
+
   return (
     <section className="relative overflow-hidden bg-gradient-hero">
       {/* Animated Background Elements */}
@@ -55,11 +58,9 @@ export default function HeroSection() {
                 size="default" 
                 variant="outline"
                 className="text-sm md:text-base px-6 py-5 border-2 hover:border-primary hover:bg-primary/5"
-                asChild
+                onClick={() => setCoursesDialogOpen(true)}
               >
-                <Link to="/about">
-                  View All Courses
-                </Link>
+                View All Courses
               </Button>
             </div>
 
@@ -134,6 +135,8 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
+
+      <CoursesDialog open={coursesDialogOpen} onOpenChange={setCoursesDialogOpen} />
     </section>
   );
 }

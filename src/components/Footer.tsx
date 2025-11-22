@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin, Download } from "lucide-react";
+import { Facebook, Youtube, Mail, Phone, MapPin, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/merit-launchers-logo.png";
 
@@ -98,16 +98,10 @@ export default function Footer() {
 
             {/* Social Media */}
             <div className="flex items-center space-x-3 mt-4">
-              <a href="https://www.facebook.com/profile.php?id=61571056940351" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/61583046760574/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Facebook">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://x.com/MeritLaunchers" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Twitter">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="https://www.instagram.com/meritlaunchers/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Instagram">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="https://youtube.com/@meritlaunchers" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="YouTube">
+              <a href="https://www.youtube.com/@merit_launchers" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="YouTube">
                 <Youtube className="h-5 w-5" />
               </a>
             </div>

@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Facebook, Youtube, Mail, Phone, MapPin, Download } from "lucide-react";
+import { Facebook, Youtube, Instagram, Twitter, Linkedin, Mail, Phone, MapPin, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/merit-launchers-logo.png";
 
@@ -103,6 +103,15 @@ export default function Footer() {
               </a>
               <a href="https://www.youtube.com/@merit_launchers" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="YouTube">
                 <Youtube className="h-5 w-5" />
+              </a>
+              <a href="https://www.instagram.com/merit_launchers/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Instagram">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="https://x.com/meritlaunchers" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="X">
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a href="https://www.linkedin.com/company/merit-launchers/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="LinkedIn">
+                <Linkedin className="h-5 w-5" />
               </a>
             </div>
           </div>

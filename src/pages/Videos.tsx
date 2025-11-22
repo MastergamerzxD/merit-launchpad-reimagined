@@ -153,39 +153,43 @@ export default function Videos() {
           {!loading && !error && videos.length > 0 && (
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {videos.map((video) => (
-                <Card 
-                  key={video.id} 
-                  className="group overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer"
-                  onClick={() => window.open(video.videoUrl, '_blank')}
+                <a
+                  key={video.id}
+                  href={video.videoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
                 >
-                  <div className="relative aspect-video overflow-hidden">
-                    <img 
-                      src={video.thumbnail} 
-                      alt={video.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="bg-primary rounded-full p-4">
-                        <Play className="h-8 w-8 text-primary-foreground fill-current" />
+                  <Card className="group overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer h-full">
+                    <div className="relative aspect-video overflow-hidden">
+                      <img 
+                        src={video.thumbnail} 
+                        alt={video.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="bg-primary rounded-full p-4">
+                          <Play className="h-8 w-8 text-primary-foreground fill-current" />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <CardContent className="p-4">
-                    <h3 className="font-semibold text-base mb-2 line-clamp-2 group-hover:text-primary transition-colors">
-                      {video.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
-                      {video.description}
-                    </p>
-                    <p className="text-xs text-muted-foreground">
-                      {new Date(video.publishedAt).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'short',
-                        day: 'numeric'
-                      })}
-                    </p>
-                  </CardContent>
-                </Card>
+                    <CardContent className="p-4">
+                      <h3 className="font-semibold text-base mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                        {video.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
+                        {video.description}
+                      </p>
+                      <p className="text-xs text-muted-foreground">
+                        {new Date(video.publishedAt).toLocaleDateString('en-US', {
+                          year: 'numeric',
+                          month: 'short',
+                          day: 'numeric'
+                        })}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </a>
               ))}
             </div>
           )}

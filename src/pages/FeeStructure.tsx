@@ -9,7 +9,7 @@ export default function FeeStructure() {
   const appLink = "https://play.google.com/store/apps/details?id=co.robin.qibrw&hl=en";
 
   const feeData = [
-    { course: "CUET (UG) per subject", tests: "10 Full Tests", fee: "₹99 plus Taxes per Subject", freeMock: "Yes" },
+    { course: "CUET (UG) per subject", tests: "10 Full Tests", fee: "₹499 plus Taxes per Subject", freeMock: "Yes" },
     { course: "CLAT (Law)", tests: "10 Full Tests", fee: "₹299 plus Taxes", freeMock: "Yes" },
     { course: "CTET -I", tests: "10 Full Tests each", fee: "₹299 plus Taxes each", freeMock: "Yes" },
     { course: "CTET-II", tests: "10 Full Tests each", fee: "₹299 plus Taxes each", freeMock: "Yes" },

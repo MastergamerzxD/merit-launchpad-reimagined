@@ -14,13 +14,63 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      blogs: {
+        Row: {
+          author: string
+          category: string
+          content: string
+          created_at: string
+          featured_image: string | null
+          id: string
+          meta_description: string | null
+          publish_date: string | null
+          slug: string
+          status: string
+          tags: string[] | null
+          title: string
+          updated_at: string
+          views: number
+        }
+        Insert: {
+          author?: string
+          category?: string
+          content?: string
+          created_at?: string
+          featured_image?: string | null
+          id?: string
+          meta_description?: string | null
+          publish_date?: string | null
+          slug: string
+          status?: string
+          tags?: string[] | null
+          title: string
+          updated_at?: string
+          views?: number
+        }
+        Update: {
+          author?: string
+          category?: string
+          content?: string
+          created_at?: string
+          featured_image?: string | null
+          id?: string
+          meta_description?: string | null
+          publish_date?: string | null
+          slug?: string
+          status?: string
+          tags?: string[] | null
+          title?: string
+          updated_at?: string
+          views?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      increment_blog_views: { Args: { blog_id: string }; Returns: undefined }
     }
     Enums: {
       [_ in never]: never
